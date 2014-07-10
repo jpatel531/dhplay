@@ -1,0 +1,72 @@
+@import url('http://reset5.googlecode.com/hg/reset.min.css');
+@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+body {
+	margin: 0px;
+}
+
+div.summary {
+/*	background: url('./picasso.jpg') no-repeat center center fixed;*/
+	background-position: 25% 0%;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	display: flex;
+}
+
+.profile-info {
+	opacity: 0.4;
+	height: 100%;
+	flex-grow: 1;
+}
+
+.profile-options {
+	height: 100%;
+	flex-grow: 1;
+
+}
+
+.profile-preview {
+	opacity: 0.4;
+	height: 100%;
+	flex-grow: 1;
+}
+
+.options-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+.option {
+	border-radius: 50%;
+	width: 35%;
+	height: 0;
+	padding-bottom: 35%;
+	border: solid;
+	border-width: thin;
+	border-color: rgba(0,0,0,0.2);
+	margin-bottom: 3.5vh;
+}
+
+.option:hover {
+	border-color: rgba(0,0,0,0.4);
+}
+
+.option:hover .option p {
+	color: rgba(0,0,0,0.4)
+}
+
+.option p {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 1.25vw;
+	text-align: center;
+	vertical-align: center;
+	margin-top: 45%;
+	color: rgba(0,0,0,0.4);
+}
+
+
+
