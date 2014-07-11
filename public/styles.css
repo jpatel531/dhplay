@@ -1,8 +1,15 @@
 @import url('http://reset5.googlecode.com/hg/reset.min.css');
 @import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('http://fonts.googleapis.com/css?family=Merriweather:400,300,700');
+@import url('http://fonts.googleapis.com/css?family=Lato:300,400,900');
 
 body {
 	margin: 0px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+h1 {
+	font-family: 'Lato', sans-serif, font-weight: 900;
 }
 
 div.summary {
@@ -15,21 +22,24 @@ div.summary {
 }
 
 .profile-info {
-	opacity: 0.4;
 	height: 100%;
-	flex-grow: 1;
+	width: 44%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .profile-options {
 	height: 100%;
-	flex-grow: 1;
-
+	width: 12%;
 }
 
 .profile-preview {
-	opacity: 0.4;
 	height: 100%;
-	flex-grow: 1;
+	width: 44%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .options-wrapper {
@@ -42,9 +52,9 @@ div.summary {
 
 .option {
 	border-radius: 50%;
-	width: 35%;
+	width: 100%;
 	height: 0;
-	padding-bottom: 35%;
+	padding-bottom: 100%;
 	border: solid;
 	border-width: thin;
 	border-color: rgba(0,0,0,0.2);
@@ -60,7 +70,6 @@ div.summary {
 }
 
 .option p {
-	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 1.25vw;
 	text-align: center;
 	vertical-align: center;
@@ -68,5 +77,64 @@ div.summary {
 	color: rgba(0,0,0,0.4);
 }
 
+div.info-wrapper {
+	width: 70%;
+	height: 30vw;
+	margin-top: -4.5%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
+div.preview-wrapper {
+	height: 70vh;
+	background-color: orange;
+}
 
+div.pic-wrapper {
+	border-radius: 50%;
+	width: 12vw;
+	height: 0;
+	padding-bottom: 12vw;
+	border: solid;
+	border-width: thin;
+	border-color: rgba(0,0,0,0.2);
+	overflow: hidden;
+}
+
+img#profile-pic {
+	height: 100%;
+	width: 100%;
+}
+
+div.info-wrapper p {
+/*	opacity: 0.4;*/
+	color: #b3b2b5;
+	text-align: center;
+}
+
+h1.name {
+	font-size: 3.5vh;
+	margin: 1vh 0 0.5vh 0;
+}
+
+p.profession {
+	margin-bottom: 1vh;
+	font-size: 1.25vh;
+	text-transform: uppercase;
+	letter-spacing: 0.3em;
+	font-family: 'Merriweather', serif;
+}
+
+p.short-bio, p.network, p.organisations {
+	font-size: 1.5vh;
+	width: 65%;
+	line-height: 2.4vh;
+	font-family: 'Merriweather', serif;
+	font-weight: 300;
+}
+
+p.network, p.organisations {
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+}
