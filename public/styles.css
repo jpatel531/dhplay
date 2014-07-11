@@ -16,7 +16,6 @@ h1 {
 }
 
 div.summary {
-/*	background: url('./picasso.jpg') no-repeat center center fixed;*/
 	background-position: 25% 0%;
 	height: 100%;
 	width: 100%;
@@ -86,7 +85,7 @@ div.summary {
 
 div.info-wrapper {
 	width: 70%;
-	height: 30vw;
+	height: 27.1vw;
 	margin-top: -4.5%;
 	display: flex;
 	flex-direction: column;
@@ -95,7 +94,7 @@ div.info-wrapper {
 
 div.preview-wrapper {
 	height: 70vh;
-/*	background-color: orange;*/
+	background-color: orange;
 }
 
 div.pic-wrapper {
@@ -144,14 +143,18 @@ p.short-bio, p.network, p.organisations, p.featured-in {
 
 p.network, p.organisations {
 	margin-top: 1vh;
-	margin-bottom: 1vh;
+	margin-bottom: 0;
+}
+
+p.organisations {
+	margin-bottom: 0.5vh;	
 }
 
 hr {
 	color: black;
 	margin: 1vh 0 0 0;
 	padding: 0;
-	width: 10vw;
+	width: 5vw;
 }
 
 button {
@@ -171,4 +174,10 @@ button {
 button:hover {
 	color: #657383;
 	border: 1px solid #657383;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	font-weight: 900;
 }
