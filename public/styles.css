@@ -26,7 +26,7 @@ div.summary {
 
 .profile-info {
 	height: 100%;
-	width: 45%;
+	width: 46%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -34,12 +34,12 @@ div.summary {
 
 .profile-options {
 	height: 100%;
-	width: 10%;
+	width: 8%;
 }
 
 .profile-preview {
 	height: 100%;
-	width: 45%;
+	width: 46%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -74,7 +74,7 @@ div.summary {
 }
 
 .option p {
-	font-size: 1.3vh;
+	font-size: 1.5vh;
 	text-align: center;
 	vertical-align: center;
 	margin-top: 45%;
@@ -165,4 +165,10 @@ button {
 	height: 5vh;
 	text-align: center;
 	vertical-align: center;
+	cursor: pointer;
+}
+
+button:hover {
+	color: #657383;
+	border: 1px solid #657383;
 }
