@@ -26,7 +26,7 @@ div.summary {
 
 .profile-info {
 	height: 100%;
-	width: 44%;
+	width: 45%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -39,7 +39,7 @@ div.summary {
 
 .profile-preview {
 	height: 100%;
-	width: 44%;
+	width: 45%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -62,6 +62,7 @@ div.summary {
 	border-width: thin;
 	border-color: rgba(0,0,0,0.2);
 	margin-bottom: 3.5vh;
+	cursor: pointer;
 }
 
 .option:hover {
@@ -73,14 +74,14 @@ div.summary {
 }
 
 .option p {
-	font-size: 1vw;
+	font-size: 1.3vh;
 	text-align: center;
 	vertical-align: center;
 	margin-top: 45%;
 	color: rgba(0,0,0,0.4);
 	text-transform: uppercase;
 	font-weight: 900;
-	letter-spacing: 0.1vw;
+	letter-spacing: 0.13vh;
 }
 
 div.info-wrapper {
@@ -94,7 +95,7 @@ div.info-wrapper {
 
 div.preview-wrapper {
 	height: 70vh;
-	background-color: orange;
+/*	background-color: orange;*/
 }
 
 div.pic-wrapper {
@@ -133,7 +134,7 @@ p.profession {
 	font-style: italic;
 }
 
-p.short-bio, p.network, p.organisations {
+p.short-bio, p.network, p.organisations, p.featured-in {
 	font-size: 1.5vh;
 	width: 65%;
 	line-height: 2.4vh;
@@ -146,15 +147,22 @@ p.network, p.organisations {
 	margin-bottom: 1vh;
 }
 
-
-
 hr {
 	color: black;
 	margin: 1vh 0 0 0;
 	padding: 0;
 	width: 10vw;
- /* background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0)); 
-  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0)); 
-  background-image:    -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0)); 
-  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0)); */
+}
+
+button {
+	background: none;
+	border: 1px solid #b3b2b5;;
+	border-radius: 50px;
+	font-family: inherit;
+	font-size: 2vh;
+	color: #b3b2b5;
+	width: 6vw;
+	height: 5vh;
+	text-align: center;
+	vertical-align: center;
 }
