@@ -2,14 +2,17 @@
 @import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro');
 @import url('http://fonts.googleapis.com/css?family=Merriweather:400,300,700');
 @import url('http://fonts.googleapis.com/css?family=Lato:300,400,900');
+@import url('http://fonts.googleapis.com/css?family=Vollkorn:400italic,400');
+
 
 body {
 	margin: 0px;
-	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-family: "Lato", sans-serif;
 }
 
 h1 {
-	font-family: 'Lato', sans-serif, font-weight: 900;
+	font-family: 'Lato', sans-serif;
+	font-weight: 900;
 }
 
 div.summary {
@@ -31,7 +34,7 @@ div.summary {
 
 .profile-options {
 	height: 100%;
-	width: 12%;
+	width: 10%;
 }
 
 .profile-preview {
@@ -70,11 +73,14 @@ div.summary {
 }
 
 .option p {
-	font-size: 1.25vw;
+	font-size: 1vw;
 	text-align: center;
 	vertical-align: center;
 	margin-top: 45%;
 	color: rgba(0,0,0,0.4);
+	text-transform: uppercase;
+	font-weight: 900;
+	letter-spacing: 0.1vw;
 }
 
 div.info-wrapper {
@@ -115,15 +121,16 @@ div.info-wrapper p {
 
 h1.name {
 	font-size: 3.5vh;
-	margin: 1vh 0 0.5vh 0;
+	margin: 1vh 0 1vh 0;
 }
 
 p.profession {
-	margin-bottom: 1vh;
-	font-size: 1.25vh;
-	text-transform: uppercase;
-	letter-spacing: 0.3em;
-	font-family: 'Merriweather', serif;
+	margin-bottom: 1.25vh;
+	font-size: 1.5vh;
+/*	text-transform: uppercase;*/
+	letter-spacing: 0.2em;
+	font-family: 'Vollkorn', serif;
+	font-style: italic;
 }
 
 p.short-bio, p.network, p.organisations {
@@ -137,4 +144,17 @@ p.short-bio, p.network, p.organisations {
 p.network, p.organisations {
 	margin-top: 1vh;
 	margin-bottom: 1vh;
+}
+
+
+
+hr {
+	color: black;
+	margin: 1vh 0 0 0;
+	padding: 0;
+	width: 10vw;
+ /* background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0)); 
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0)); 
+  background-image:    -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0)); 
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0)); */
 }
