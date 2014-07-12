@@ -265,6 +265,7 @@ div.work {
 	flex-direction: row;
 	align-items: center;
 	justify-content: flex-end;
+	margin-bottom: 10px;
 }
 
 div.work#two {
@@ -329,7 +330,8 @@ p.recommendation-number::before, p.cool-information::before {
 p.short-description {
 	/*background-color: orange;*/
 	height: 50%;
-
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 p.cool-information::before {
@@ -351,4 +353,7 @@ p.cool-information {
 	text-align: right;
 }
 
-
+div.work-preview hr {
+	margin: 15px 0;
+	margin-right: 15px;
+}
