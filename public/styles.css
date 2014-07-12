@@ -267,19 +267,88 @@ div.work {
 	justify-content: flex-end;
 }
 
-div.pull-right {
-	display: flex;
-	flex-direction: row;
+div.work#two {
+	/*background-color: blue;*/
 }
 
 div.preview-pic.pic-wrapper{
 	border-radius: 50%;
-	width: 9vw;
+	width: 30%;
 	height: 0;
-	padding-bottom: 9vw;
+	padding-bottom: 30%;
 	border: solid;
 	border-width: thin;
 	border-color: rgba(0,0,0,0.2);
 	overflow: hidden;
 	margin-right: 12px;
+	margin-left: 10px;
 }
+
+div.work-preview-info {
+	/*background-color: blue;*/
+	width: 65%;
+	font-size: 10px;
+	width: 65%;
+	line-height: 15px;
+	font-family: 'Merriweather', serif;
+	font-weight: 300;
+	display: flex;
+	justify-content: flex-start;
+/*	height: 100%;*/
+}
+
+div.work-preview-info#info {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
+}
+
+div#info p {
+	text-align: left;
+}
+
+h1.preview-title {
+	text-transform: uppercase;
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+
+p.recommendation-number {
+	vertical-align: center;
+}
+
+p.recommendation-number::before, p.cool-information::before {
+	font-family: 'Entypo';
+	content: '\2665';
+	font-size: 25px;
+	color: red;
+	opacity: 0.4;
+}
+
+p.short-description {
+	/*background-color: orange;*/
+	height: 50%;
+
+}
+
+p.cool-information::before {
+	content: '\2605';
+	color: orange;
+	opacity: 0.4;
+}
+
+div.additional-info {
+	display: flex;
+	justify-content: flex-end;
+}
+
+p.recommendation-number, p.cool-information {
+	width: 50%;
+}
+
+p.cool-information {
+	text-align: right;
+}
+
+
