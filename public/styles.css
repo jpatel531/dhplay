@@ -9,6 +9,7 @@
 	src: url('./fonts/entypo/entypo.ttf') format('truetype');
 }
 
+
 body {
 	margin: 0px;
 	font-family: "Lato", sans-serif;
@@ -18,6 +19,8 @@ h1 {
 	font-family: 'Lato', sans-serif;
 	font-weight: 900;
 }
+
+/*------ LAYOUT  -------*/
 
 div.summary {
 	background-position: 25% 0%;
@@ -38,6 +41,12 @@ div.summary {
 .profile-options {
 	height: 100%;
 	width: 8%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/*background-color: blue;*/
+	padding-top: 10px;
 }
 
 .profile-preview {
@@ -48,12 +57,16 @@ div.summary {
 	justify-content: center;
 }
 
+/*----MIDDLE CIRCLES -----*/
+
 .options-wrapper {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 100%;
+	/*background-color: salmon;*/
+	height: 330px;
+	width: 100%;
 }
 
 .option {
@@ -87,9 +100,11 @@ div.summary {
 	letter-spacing: 0.9px;
 }
 
+/*------PROFILE INFO SUMMARY----*/
+
 div.info-wrapper {
 	width: 70%;
-	height: 27.1vw;
+	height: 325px;
 	margin-top: -4.5%;
 	display: flex;
 	flex-direction: column;
@@ -98,8 +113,10 @@ div.info-wrapper {
 
 div.preview-wrapper {
 	height: 70vh;
-	background-color: orange;
+/*	background-color: orange;*/
 }
+
+/*PROFILE PIC*/
 
 div.pic-wrapper {
 	border-radius: 50%;
@@ -117,6 +134,8 @@ img#profile-pic {
 	width: 100%;
 }
 
+/*PROFILE SUMMARY TEXT*/
+
 div.info-wrapper p {
 /*	opacity: 0.4;*/
 	color: #b3b2b5;
@@ -125,11 +144,12 @@ div.info-wrapper p {
 
 h1.name {
 	font-size: 20px;
-	margin: 1vh 0 1vh 0;
+	margin: 8px 0;
 }
 
 p.profession {
-	margin-bottom: 1.25vh;
+	margin-top: 5px;
+	margin-bottom: 12px;
 	font-size: 10px;
 	letter-spacing: 0.2em;
 	font-family: 'Vollkorn', serif;
@@ -137,27 +157,31 @@ p.profession {
 }
 
 p.short-bio, p.network, p.organisations, p.featured-in {
-	font-size: 1.5vh;
+	font-size: 10px;
 	width: 65%;
-	line-height: 2.4vh;
+	line-height: 15px;
 	font-family: 'Merriweather', serif;
 	font-weight: 300;
 }
 
+p.short-bio {
+	margin-bottom: 10px;
+}
+
 p.network, p.organisations {
-	margin-top: 1vh;
+	margin-top: 5px;
 	margin-bottom: 0;
 }
 
 p.organisations {
-	margin-bottom: 0.5vh;	
+	margin-bottom: 12px;	
 }
 
 hr {
 	color: black;
-	margin: 1vh 0 0 0;
+	margin: 12px 0 0 0;
 	padding: 0;
-	width: 5vw;
+	width: 50px;
 }
 
 button {
@@ -165,10 +189,10 @@ button {
 	border: 1px solid #b3b2b5;;
 	border-radius: 50px;
 	font-family: inherit;
-	font-size: 2vh;
+	font-size: 15px;
 	color: #b3b2b5;
-	width: 6vw;
-	height: 5vh;
+	width: 50px;
+	height: 25px;
 	text-align: center;
 	vertical-align: center;
 	cursor: pointer;
@@ -185,14 +209,12 @@ a {
 	font-weight: 900;
 }
 
-button#follow::before {
+button#follow::before, button#message::before {
 	font-family: 'Entypo';
 	content: '\e700';
 	font-size: 25px;
 }
 
 button#message::before {
-	font-family: 'Entypo';
 	content: '\1F53F';
-	font-size: 25px;
 }
