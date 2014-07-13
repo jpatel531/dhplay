@@ -274,6 +274,8 @@ div.work-wrapper {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 
@@ -284,8 +286,8 @@ div.work {
 	flex-direction: row;
 	align-items: center;
 	justify-content: flex-end;
-	margin-bottom: 25px;
-	margin-top: 25px;
+/*	margin-bottom: 25px;
+	margin-top: 25px;*/
 }
 
 /*PICTURES*/
@@ -351,7 +353,7 @@ p.recommendation-number {
 	vertical-align: center;
 }
 
-p.recommendation-number::before, p.cool-information::before {
+p.recommendation-number::before, p.cool-information::before, p.anthology::before, p.single-author::before {
 	font-family: 'Entypo';
 	content: '\2665';
 	font-size: 25px;
@@ -362,7 +364,16 @@ p.recommendation-number::before, p.cool-information::before {
 p.cool-information::before {
 	content: '\2605';
 	color: orange;
-	opacity: 0.4;
+}
+
+p.anthology::before {
+	content: '\1F4D5';
+	color: brown;
+}
+
+p.single-author::before {
+	content: '\1F464';
+	color: #336600;
 }
 
 div.additional-info {
@@ -370,14 +381,14 @@ div.additional-info {
 	justify-content: flex-end;
 }
 
-p.recommendation-number, p.cool-information {
+p.recommendation-number, p.cool-information, p.anthology, p.single-author {
 	width: 50%;
 }
 
-p.cool-information {
+p.cool-information, p.anthology, p.single-author {
 	text-align: right;
 }
 
 hr#after-work {
-	margin: 10px 15px 15px 15px;
+	margin: 25px 15px 15px 15px;
 }
