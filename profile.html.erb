@@ -1,8 +1,9 @@
-<html lang="en">
+<html lang="en" ng-app="profile">
 <head>
 	<title></title>
 	<link href="./public/styles.css" rel="stylesheet">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+  <script src="./profile.js"></script>
 </head>
 <body>
 
@@ -38,8 +39,8 @@
 
 		<div class="profile-preview">
 
-			<div class="info-wrapper preview-wrapper">
-
+			<div class="info-wrapper preview-wrapper" ng-controller="PreviewController as preview">
+				{{hello}}
 
 				<div class="work-preview">
 					<div class="work-preview-header">

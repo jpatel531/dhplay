@@ -1,4 +1,8 @@
-app.controller('ProfileController', function(){
+var app = angular.module('profile', []);
+
+app.controller('PreviewController', function($scope){
+
+	this.selection = workSelection;
 
 	var workSelection = [
 		{
