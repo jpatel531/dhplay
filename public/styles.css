@@ -255,7 +255,7 @@ div.work-preview div.work-preview-header {
 	justify-content: center;
 	flex-direction: column;
 	width: 100%;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 h3#selections {
@@ -270,21 +270,22 @@ h3#selections {
 
 /*WORK LAYOUT*/
 
+div.work-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
 div.work {
-	/*background-color: orange;*/
 	width: 100%;
 	height: 30%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: flex-end;
-	margin-bottom: 15px;
-	margin-top: 15px;
-/*	padding-top: 50px;*/
-}
-
-div.work#two {
-	/*background-color: blue;*/
+	margin-bottom: 25px;
+	margin-top: 25px;
 }
 
 /*PICTURES*/
@@ -378,5 +379,5 @@ p.cool-information {
 }
 
 hr#after-work {
-	margin: 15px 15px 15px 15px;
+	margin: 10px 15px 15px 15px;
 }

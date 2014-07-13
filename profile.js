@@ -21,7 +21,7 @@ app.controller('PreviewController', function($scope){
 			title: "New York",
 			description: "This is a short description of the art-work for the profile preview.",
 			recommendations: 121,
-			additionalInformation: "Featured in <a href='#'>Notes</a>",
+			additionalInformation: "Featured in Notes",
 			image: "./public/street.jpg"
 		}
 
