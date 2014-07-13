@@ -1,4 +1,4 @@
-var app = angular.module('profile', []);
+var app = angular.module('preview', []);
 
 app.controller('PreviewController', function($scope){
 
