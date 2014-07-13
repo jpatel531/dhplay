@@ -5,7 +5,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
   <script src="./profile.js"></script>
 </head>
-<body>
+<body ng-controller="PreviewController as preview">
 
 
 	<div class="summary">
@@ -31,15 +31,15 @@
 		<div class="profile-options">
 
 			<div class="options-wrapper">
-				<div class="option" id="portfolio"><p>Work</p></div>
-				<div class="option" id="social"><p>Picks</p></div>
+				<div class="option" id="portfolio" ng-mouseenter="preview.selection = workSelection"><p>Work</p></div>
+				<div class="option" id="social" ng-mouseenter="preview.selection = pickSelection"><p>Picks</p></div>
 				<div class="option" id="bio"><p>Story</p></div>
 			</div>
 		</div>
 
 		<div class="profile-preview">
 
-			<div class="info-wrapper preview-wrapper" ng-controller="PreviewController as preview">
+			<div class="info-wrapper preview-wrapper">
 				{{hello}}
 
 				<div class="work-preview">
@@ -61,7 +61,7 @@
 							</div>
 
 							<div class="preview-pic pic-wrapper">
-								<img id="profile-pic" src="./public/chillies.jpg">
+								<img id="profile-pic" ng-src="{{work.image}}">
 							</div>
 						</div>	
 					<div class="hr-wrapper"><hr id="after-work" ng-show="!$last"></div>
@@ -69,14 +69,12 @@
 
 
 
-				</div>
 
 			</div>
 
 
 		</div>
-
-
+ 
 	</div>	
 
 </body>
