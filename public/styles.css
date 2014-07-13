@@ -377,6 +377,6 @@ p.cool-information {
 	text-align: right;
 }
 
-div.work-preview hr {
+hr#after-work {
 	margin: 15px 15px 15px 15px;
 }

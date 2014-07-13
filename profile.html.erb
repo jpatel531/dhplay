@@ -47,27 +47,27 @@
 						<h3 id="selections">Selections of Laurie's Work</h3>
 					</div>
 
-					<div class="work" id="one">
-						<div class="work-preview-info">
-							<div id="info">
-									<h1 class="preview-title">Chillies</h1>
-									<p class="short-description">This is a short description of the art-work for the profile preview.</p>
-									<div class="additional-info">
-										<p class="recommendation-number">49</p>
-											<p class="cool-information">Commissioned</p>
-									</div>
+					<div class="work-wrapper" ng-repeat="work in preview.selection">
+						<div class="work">
+							<div class="work-preview-info">
+								<div id="info">
+										<h1 class="preview-title">{{work.title}}</h1>
+										<p class="short-description">{{work.description}}</p>
+										<div class="additional-info">
+											<p class="recommendation-number">{{work.recommendations}}</p>
+												<p class="cool-information">{{work.additionalInformation}}</p>
+										</div>
+								</div>
 							</div>
-						</div>
 
-						<div class="preview-pic pic-wrapper">
-							<img id="profile-pic" src="./public/chillies.jpg">
-						</div>
+							<div class="preview-pic pic-wrapper">
+								<img id="profile-pic" src="./public/chillies.jpg">
+							</div>
+						</div>	
+					<hr id="after-work">
+				</div>
 
-					</div>	
-
-					<hr>
-
-					<div class="work" id="two">
+<!-- 					<div class="work" id="two">
 						<div class="work-preview-info">
 							<div id="info">
 								<h1 class="preview-title">Magic</h1>
@@ -101,7 +101,7 @@
 							<div class="preview-pic pic-wrapper">
 								<img id="profile-pic" src="./public/street.jpg">
 						</div>
-					</div>	
+					</div>	 -->
 
 				</div>
 

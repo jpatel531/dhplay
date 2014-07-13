@@ -2,8 +2,6 @@ var app = angular.module('profile', []);
 
 app.controller('PreviewController', function($scope){
 
-	this.selection = workSelection;
-
 	var workSelection = [
 		{
 			title: "Chillies",
@@ -29,7 +27,7 @@ app.controller('PreviewController', function($scope){
 
 	];
 
-
+	this.selection = workSelection;
 
 
 });
