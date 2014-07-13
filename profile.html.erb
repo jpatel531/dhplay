@@ -33,7 +33,7 @@
 			<div class="options-wrapper">
 				<div class="option" id="portfolio" ng-mouseenter="preview.selection = workSelection"><p>Work</p></div>
 				<div class="option" id="social" ng-mouseenter="preview.selection = pickSelection"><p>Picks</p></div>
-				<div class="option" id="bio"><p>Story</p></div>
+				<div class="option" id="bio" ng-mouseenter="preview.selection = storySelection"><p>Story</p></div>
 			</div>
 		</div>
 
@@ -46,23 +46,23 @@
 					<div class="work-preview-header">
 						<h3 id="selections" ng-show="preview.selection == workSelection">Selections of Laurie's Work</h3>
 						<h3 id="selections" ng-show="preview.selection == pickSelection">What Laurie Likes</h3>
-						<h3 id="selections" ng-show="preview.selection == storySelection">Selections of Laurie's Work</h3>
+						<h3 id="selections" ng-show="preview.selection == storySelection">Laurie's Stories</h3>
 					</div>
 
 					<div class="work-wrapper" ng-repeat="work in preview.selection">
 						<div class="work">
-							<div class="work-preview-info">
+							<div class="work-preview-info" ng-class="{ 'story': preview.selection == storySelection }">
 								<div id="info">
 										<h1 class="preview-title">{{work.title}}</h1>
 										<p class="short-description">{{work.description}}</p>
 										<div class="additional-info">
-											<p class="recommendation-number">{{work.recommendations}}</p>
+											<p class="recommendation-number" ng-class="{ 'story': preview.selection == storySelection }">{{work.recommendations}}</p>
 												<p ng-class="{ 'cool-information' : work.commissionedOrFeatured, 'anthology' : work.anthology, 'single-author' : work.singleAuthor}">{{work.additionalInformation}}</p>
 										</div>
 								</div>
 							</div>
 
-							<div class="preview-pic pic-wrapper">
+							<div class="preview-pic pic-wrapper" ng-show="preview.selection != storySelection">
 								<img id="profile-pic" ng-src="{{work.image}}">
 							</div>
 						</div>	

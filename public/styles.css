@@ -255,7 +255,7 @@ div.work-preview div.work-preview-header {
 	justify-content: center;
 	flex-direction: column;
 	width: 100%;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 h3#selections {
@@ -325,6 +325,10 @@ div.work-preview-info#info {
 	width: 100%;
 }
 
+div.work-preview-info.story {
+	width: 95%;
+}
+
 div#info p {
 	text-align: left;
 }
@@ -359,6 +363,7 @@ p.recommendation-number::before, p.cool-information::before, p.anthology::before
 	font-size: 25px;
 	color: red;
 	opacity: 0.4;
+	margin-right: 5px;
 }
 
 p.cool-information::before {
@@ -389,6 +394,11 @@ p.cool-information, p.anthology, p.single-author {
 	text-align: right;
 }
 
+p.recommendation-number.story {
+	margin-top: 5px;
+	margin-right: 2px;
+}
+
 hr#after-work {
-	margin: 25px 15px 15px 15px;
+	margin: 25px 0px 15px 25px;
 }

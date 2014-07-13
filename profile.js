@@ -56,11 +56,29 @@ app.controller('PreviewController', function($scope){
 		image: "./public/matisse.jpg"
 	}
 
+	];
+
+	$scope.storySelection = [
+		{
+			title: "Lorem Ipsum",
+			description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			recommendations: 22
+		},
+		{
+			title: "Lorem Ipsum",
+			description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			recommendations: 22
+		},
+		{
+			title: "Lorem Ipsum",
+			description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			recommendations: 22
+
+		}
 
 	];
 
 	this.selection = $scope.workSelection;
-
 
 
 });
