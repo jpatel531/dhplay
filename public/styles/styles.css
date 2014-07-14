@@ -423,7 +423,7 @@ div.portfolio {
 	/*background-color: rgba(0,0,0,0.75);*/
 }
 
-div.work-wrapper {
+div.work-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -446,6 +446,7 @@ img.select, img.small {
 
 .large {
 	width: 175px; height: 175px;
+	cursor: none;
 	position: absolute;
 	border-radius: 100%;
 	

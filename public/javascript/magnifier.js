@@ -14,9 +14,9 @@ $(document).ready(function(){
 			//width specified to 200px in the html. To get the actual dimensions we have
 			//created this image object.
 			var image_object = new Image();
-			image_object.src = '../images/street.jpg'
+			image_object.src = $(".small").attr("ng-src");
 
-			// $(".small").attr("src");
+			
 			
 			//This code is wrapped in the .load function which is important.
 			//width and height of the object would return 0 if accessed before 
