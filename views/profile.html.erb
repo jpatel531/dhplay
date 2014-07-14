@@ -1,0 +1,101 @@
+<html lang="en" ng-app="profile-page">
+<head>
+	<title></title>
+	 <script src="http://thecodeplayer.com/uploads/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+
+	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+  <script src="javascript/profile.js"></script>
+  <script src="javascript/magnifier.js"></script>
+   <link href="styles/styles.css" rel="stylesheet">
+  	 	<script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>
+
+</head>
+<body ng-controller="ProfileController as profile">
+
+<!------------------ PROFILE COVER ------------------------------------>
+
+	<div class="body-wrapper">
+
+		<div class="summary">
+
+			<div class="profile-info">
+				<div class="info-wrapper">
+					<div class="pic-wrapper">
+						<img id="profile-pic" src="images/jpeg.jpg">
+					</div>
+					<h1 class="name">Laurie Lewis</h1>
+					<p class="profession">Artist & Illustrator</p>
+					<p class="short-bio">Please feel free to contact me directly if you would like to know more about what I do or request a commission.</p>
+					<hr>
+					<p class="network">University of Cambridge</p>
+					<hr>
+					<p class="organisations">Co-founder of <a href="#">Notes</a></p>
+					<span><button id="follow"></button>
+					<button id="message"></button></span>
+				</div>
+			</div>
+
+			<div class="profile-options">
+
+				<div class="options-wrapper">
+					<div class="option" id="portfolio" ng-mouseenter="profile.selection = workSelection"><p>Work</p></div>
+					<div class="option" id="social" ng-mouseenter="profile.selection = pickSelection"><p>Picks</p></div>
+					<div class="option" id="bio" ng-mouseenter="profile.selection = storySelection"><p>Story</p></div>
+				</div>
+			</div>
+
+			<div class="profile-preview">
+
+				<div class="info-wrapper preview-wrapper">
+
+					<div class="work-preview">
+						<div class="work-preview-header">
+							<h3 id="selections" ng-show="profile.selection == workSelection">Selections of Laurie's Work</h3>
+							<h3 id="selections" ng-show="profile.selection == pickSelection">What Laurie Likes</h3>
+							<h3 id="selections" ng-show="profile.selection == storySelection">Laurie's Stories</h3>
+						</div>
+
+						<div class="work-wrapper" ng-repeat="work in profile.selection">
+							<div class="work">
+								<div class="work-preview-info" ng-class="{ 'story': profile.selection == storySelection }">
+									<div id="info">
+										<h1 class="preview-title">{{work.title}}</h1>
+										<p class="short-description">{{work.description}}</p>
+										<div class="additional-info">
+											<p class="recommendation-number" ng-class="{ 'story': profile.selection == storySelection }">{{work.recommendations}}</p>
+											<p ng-class="{ 'cool-information' : work.commissionedOrFeatured, 'anthology' : work.anthology, 'single-author' : work.singleAuthor}">{{work.additionalInformation}}</p>
+										</div>
+								</div>
+							</div>
+
+							<div class="preview-pic pic-wrapper" ng-show="profile.selection != storySelection">
+								<img id="profile-pic" ng-src="{{work.image}}">
+							</div>
+						</div>	
+						<div class="hr-wrapper"><hr id="after-work" ng-show="!$last"></div>
+
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+
+<!--------------------------- PORTFOLIO-------------------------------->
+	<div class="portfolio">
+		<div class="work-wrapper">
+			<div class="magnify">
+				<div class="large"></div>
+				<img class="small select" ng-src="{{workSelection[2].image}}">
+			</div>
+		</div>
+
+			<!-- Lets load up prefixfree to handle CSS3 vendor prefixes -->
+	<!-- You can download it from http://leaverou.github.com/prefixfree/ -->
+
+	<!-- Time for jquery action -->
+	
+
+	</div>
+
+</body>
+</html>

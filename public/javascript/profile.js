@@ -1,6 +1,6 @@
-var app = angular.module('preview', []);
+var app = angular.module('profile-page', []);
 
-app.controller('PreviewController', function($scope){
+app.controller('ProfileController', function($scope){
 
 	$scope.workSelection = [
 		{
@@ -9,7 +9,7 @@ app.controller('PreviewController', function($scope){
 			recommendations: 49,
 			additionalInformation: "Commissioned",
 			commissionedOrFeatured: true,
-			image: "./public/chillies.jpg"
+			image: "../images/chillies.jpg"
 		},
 		{
 			title: "Magic",
@@ -17,7 +17,7 @@ app.controller('PreviewController', function($scope){
 			recommendations: 193,
 			additionalInformation: "Commissioned",
 			commissionedOrFeatured: true,
-			image: "./public/room.jpg",
+			image: "../images/room.jpg",
 		},
 		{
 			title: "New York",
@@ -25,7 +25,7 @@ app.controller('PreviewController', function($scope){
 			recommendations: 121,
 			additionalInformation: "Featured in Notes",
 			commissionedOrFeatured: true,
-			image: "./public/street.jpg"
+			image: "../images/street.jpg"
 		}
 
 	];
@@ -45,7 +45,7 @@ app.controller('PreviewController', function($scope){
 		additionalInformation: "By Matthew Neal",
 		singleAuthor: true,
 		recommendations: 362,
-		image: "./public/matt.jpg"
+		image: "../images/matt.jpg"
 	},
 	{
 		title: "Matisse and his Birds",
@@ -53,7 +53,7 @@ app.controller('PreviewController', function($scope){
 		additionalInformation: "By Jemima Moore",
 		singleAuthor: true,
 		recommendations: 91,
-		image: "./public/matisse.jpg"
+		image: "../images/matisse.jpg"
 	}
 
 	];
