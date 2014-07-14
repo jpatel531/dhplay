@@ -414,7 +414,7 @@ hr#after-work {
 
 div.portfolio {
 	min-height: 100%;
-	height: 60px;
+	/*height: 60px;*/
 	width: 100%;
 	/*background-color: salmon;*/
 	display: flex;
@@ -438,11 +438,15 @@ img.select, img.small {
 	height: auto;
 	border: 1px solid rgba(0,0,0,0.2);
 	border-radius: 6px;
+	margin: 0 auto;
 }
 
 /*----MAGNIFIER----*/
 
-.magnify {width: inherit; margin: inherit; position: relative;}
+.magnify {
+	width: auto; margin: inherit; position: relative;
+/*	display: flex; justify-content: center; align-items: center;*/
+}
 
 .large {
 	width: 175px; height: 175px;
@@ -456,7 +460,7 @@ img.select, img.small {
 	inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
 	
 	/*Lets load up the large image first*/
-	background: url('../images/street.jpg') no-repeat;
+	/*background: url('../images/street.jpg') no-repeat;*/
 	
 	/*hide the glass by default*/
 	display: none;
@@ -465,3 +469,11 @@ img.select, img.small {
 /*To solve overlap bug at the edges during magnification
 .small { display: block; }
 */
+
+/*------PORTFOLIO NAV------*/
+
+
+
+
+
+
