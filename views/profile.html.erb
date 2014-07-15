@@ -10,8 +10,6 @@
   <script src="javascript/magnifier.js"></script>
    <link href="styles/styles.css" rel="stylesheet">
  	<script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>
-<!--   // <script src="https://raw.githubusercontent.com/durated/angular-scroll/master/angular-scroll.min.js"></script> 	 -->
-
 </head>
 <body ng-controller="ProfileController as profile">
 
@@ -88,9 +86,13 @@
 
 		<div class="portfolio-nav">
 			<ul class="work-selector">
-				<li ng-class="{'red' : portfolioSelection == 0}">Chillies</li>
-				<li ng-class="{'red' : portfolioSelection == 1}">Magic</li>
-				<li ng-class="{'red' : portfolioSelection == 2}">New York</li>
+				<li 
+					ng-repeat="work in workSelection"
+					ng-class="{'red' : portfolioSelection == workSelection.indexOf(work)}"
+					ng-click="portfolioSelection = workSelection.indexOf(work)">
+					{{work.title}}
+				</li>
+
 			</ul>
 		</div>
 
@@ -103,11 +105,16 @@
 
 		<script>
 		$(document).ready(function(){
+			$('.work-selector').hide();
+
 			$(window).on('scroll', function(){
+				$("html, body").animate({ scrollTop: "100%" });
 				var elem = $("div.summary").height();
+				var bla = $("div.option#bio").offset().top
 				var wind = $(window).scrollTop();
-				if(wind > 500) {
-					$('.work-selector').show();
+				if(wind > (bla)) {
+					// $('portfolio-nav').show();
+					$('.work-selector').fadeIn('slow');
 					$('div.portfolio').addClass('active');
 					$('div.portfolio').focus();
 				} else {

@@ -423,7 +423,7 @@ div.portfolio {
 	/*background-color: rgba(0,0,0,0.75);*/
 }
 
-div.portfolio::focus {
+div.portfolio:focus {
 	outline: none;
 }
 
@@ -485,13 +485,21 @@ img.select, img.small {
 
 .portfolio-nav {
 	position: fixed;
-	top: 50%;
-	left: 10%;
+	top: 10%;
+	left: 5%;
+	display: hidden;
+}
+
+ul.work-selector {
+	list-style-type: none;
+}
+
+ul.work-selector li{
+	cursor: pointer;
 }
 
 li.red {
 	color: red;
 }
-
 
 
