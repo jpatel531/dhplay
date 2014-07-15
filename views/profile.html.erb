@@ -10,7 +10,7 @@
   <script src="javascript/magnifier.js"></script>
    <link href="styles/styles.css" rel="stylesheet">
  	<script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>
-  <script src="https://raw.githubusercontent.com/durated/angular-scroll/master/angular-scroll.min.js"></script> 	
+<!--   // <script src="https://raw.githubusercontent.com/durated/angular-scroll/master/angular-scroll.min.js"></script> 	 -->
 
 </head>
 <body ng-controller="ProfileController as profile">
@@ -104,9 +104,9 @@
 		<script>
 		$(document).ready(function(){
 			$(window).on('scroll', function(){
-				var elem = $("div.summary").offset().top;
+				var elem = $("div.summary").height();
 				var wind = $(window).scrollTop();
-				if(wind > elem) {
+				if(wind > 500) {
 					$('.work-selector').show();
 					$('div.portfolio').addClass('active');
 					$('div.portfolio').focus();

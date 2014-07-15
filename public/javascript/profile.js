@@ -84,14 +84,24 @@ app.controller('ProfileController', function($scope, $window){
 
 	$scope.togglePortfolio = function(e){
 		if ((angular.element("div.portfolio.active").length > 0)) {
-			if (e.keyCode === 40 && $scope.portfolioSelection >= 0) {
+			if (e.keyCode === 40) {
 				e.preventDefault();
-				// angular.element("div.large").removeAttr('ng-style');
-				$scope.portfolioSelection += 1
+				if ($scope.portfolioSelection < $scope.workSelection.length - 1) {
+					$scope.portfolioSelection += 1
+				}
+				// else if ($scope.portfolioSelection === $scope.workSelection.length)
+				else {
+					return;
+				}
 			}
-			else if (e.keyCode === 38 && $scope.portfolioSelection <= $scope.workSelection.length) {
+			else if (e.keyCode === 38) {
 				e.preventDefault();
-				$scope.portfolioSelection -= 1
+				if ($scope.portfolioSelection > 0) {
+					$scope.portfolioSelection -= 1
+				}	
+				else {
+					return;
+				}		
 			}
 		}
 	};

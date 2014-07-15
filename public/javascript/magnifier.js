@@ -7,8 +7,8 @@ $(document).ready(function(){
 		//When the user hovers on the image, the script will first calculate
 		//the native dimensions if they don't exist. Only after the native dimensions
 		//are available, the script will show the zoomed version.
-		if(!native_width && !native_height)
-		{
+		// if(!native_width && !native_height)
+		// {
 			//This will create a new image object with the same image as that in .small
 			//We cannot directly get the dimensions from .small because of the 
 			//width specified to 200px in the html. To get the actual dimensions we have
@@ -23,9 +23,9 @@ $(document).ready(function(){
 			//the image gets loaded.
 			native_width = image_object.width;
 			native_height = image_object.height;
-		}
-		else
-		{
+		// }
+		// else
+		// {
 			//x/y coordinates of the mouse
 			//This is the position of .magnify with respect to the document.
 			var magnify_offset = $(this).offset();
@@ -64,7 +64,7 @@ $(document).ready(function(){
 				//If you hover on the image now, you should see the magnifying glass in action
 				$(".large").css({left: px, top: py, backgroundPosition: bgp});
 			}
-		}
+		// }
 	})
 
 })

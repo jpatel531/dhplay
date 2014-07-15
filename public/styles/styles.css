@@ -427,6 +427,10 @@ div.portfolio::focus {
 	outline: none;
 }
 
+/*div.portfolio::active {
+	outline: none;
+}*/
+
 div.work-container {
 	display: flex;
 	justify-content: center;
@@ -448,7 +452,10 @@ img.select, img.small {
 /*----MAGNIFIER----*/
 
 .magnify {
-	width: auto; margin: inherit; position: relative;
+	width: auto; 
+	margin: 0 auto;
+	position: relative;
+
 /*	display: flex; justify-content: center; align-items: center;*/
 }
 
