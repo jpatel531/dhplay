@@ -88,13 +88,14 @@
 			<ul class="work-selector">
 				<li 
 					ng-repeat="work in workSelection"
-					ng-class="{'red' : portfolioSelection == workSelection.indexOf(work)}"
-					ng-click="portfolioSelection = workSelection.indexOf(work)">
+					ng-click="displayFull(work)"
+					ng-class="{'red' : portfolioSelection == workSelection.indexOf(work)}">
 					{{work.title}}
 				</li>
 
 			</ul>
 		</div>
+
 
 		<div class="work-container">
 			<div class="magnify">

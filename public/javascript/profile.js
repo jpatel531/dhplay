@@ -17,6 +17,10 @@ app.controller('ProfileController', ['$scope', '$http', function($scope, $http){
 
 	$scope.portfolioSelection = 0;
 
+	$scope.displayFull = function(work){
+		$scope.portfolioSelection = $scope.workSelection.indexOf(work);
+	};
+
 	$scope.togglePortfolio = function(e){
 		if ((angular.element("div.portfolio.active").length > 0)) {
 			if (e.keyCode === 40) {
