@@ -423,6 +423,10 @@ div.portfolio {
 	/*background-color: rgba(0,0,0,0.75);*/
 }
 
+div.portfolio::focus {
+	outline: none;
+}
+
 div.work-container {
 	display: flex;
 	justify-content: center;
@@ -472,8 +476,15 @@ img.select, img.small {
 
 /*------PORTFOLIO NAV------*/
 
+.portfolio-nav {
+	position: fixed;
+	top: 50%;
+	left: 10%;
+}
 
-
+li.red {
+	color: red;
+}
 
 
 

@@ -1,6 +1,6 @@
 var app = angular.module('profile-page', []);
 
-app.controller('ProfileController', function($scope){
+app.controller('ProfileController', function($scope, $window){
 
 	$scope.workSelection = [
 		{
@@ -79,6 +79,24 @@ app.controller('ProfileController', function($scope){
 	];
 
 	this.selection = $scope.workSelection;
+
+	$scope.portfolioSelection = 0;
+
+	$scope.togglePortfolio = function(e){
+		if ((angular.element("div.portfolio.active").length > 0)) {
+			if (e.keyCode === 40 && $scope.portfolioSelection >= 0) {
+				e.preventDefault();
+				// angular.element("div.large").removeAttr('ng-style');
+				$scope.portfolioSelection += 1
+			}
+			else if (e.keyCode === 38 && $scope.portfolioSelection <= $scope.workSelection.length) {
+				e.preventDefault();
+				$scope.portfolioSelection -= 1
+			}
+		}
+	};
+
+
 
 
 });

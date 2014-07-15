@@ -84,40 +84,39 @@
 	</div>
 
 <!--------------------------- PORTFOLIO-------------------------------->
-	<div class="portfolio">
+	<div class="portfolio" ng-keydown="togglePortfolio($event)" tabindex="0">
 
-
+		<div class="portfolio-nav">
+			<ul class="work-selector">
+				<li ng-class="{'red' : portfolioSelection == 0}">Chillies</li>
+				<li ng-class="{'red' : portfolioSelection == 1}">Magic</li>
+				<li ng-class="{'red' : portfolioSelection == 2}">New York</li>
+			</ul>
+		</div>
 
 		<div class="work-container">
 			<div class="magnify">
-				<div class="large" ng-style="{'background':'url({{workSelection[0].image}}) no-repeat'}"></div>
-				<img class="small select" ng-src="{{workSelection[0].image}}">
+				<div class="large" style="background:url({{workSelection[portfolioSelection].image}}) no-repeat"></div>
+				<img class="small select" ng-src="{{workSelection[portfolioSelection].image}}">
 			</div>
 		</div>
 
-	<script type='text/javascript'>
-    $(function(){
-      //Keep track of last scroll
-      var lastScroll = 0;
-      $(window).scroll(function(event){
-          //Sets the current scroll position
-          var st = $(this).scrollTop();
-          //Determines up-or-down scrolling
-          if (st > lastScroll){
-             //Replace this with your function call for downward-scrolling
-             // alert("DOWN");
-          }
-          else {
-             //Replace this with your function call for upward-scrolling
-             // alert("UP");
-          }
-          //Updates scroll position
-          lastScroll = st;
-      });
-    });
-</script>
-
-
+		<script>
+		$(document).ready(function(){
+			$(window).on('scroll', function(){
+				var elem = $("div.summary").offset().top;
+				var wind = $(window).scrollTop();
+				if(wind > elem) {
+					$('.work-selector').show();
+					$('div.portfolio').addClass('active');
+					$('div.portfolio').focus();
+				} else {
+					$('.work-selector').hide();
+					$('div.portfolio').removeClass('active');
+				}
+			})
+		});
+		</script>
 	</div>
 
 </body>
