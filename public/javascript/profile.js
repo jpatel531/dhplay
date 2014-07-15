@@ -4,14 +4,16 @@ app.controller('ProfileController', ['$scope', '$http', function($scope, $http){
 
 	var $this = this;
 
+	$scope.firstThree = function(selection){
+		return selection.slice(0,3)
+	};
+
 	$http.get('./javascript/laurie.json').success(function(data){
 		$scope.workSelection = data.workSelection;
 		$scope.pickSelection = data.pickSelection;
 		$scope.storySelection = data.storySelection;
-		$this.selection = $scope.workSelection;
+		$this.selection = $scope.firstThree($scope.workSelection);
 	});
-
-	
 
 	$scope.portfolioSelection = 0;
 
@@ -22,7 +24,6 @@ app.controller('ProfileController', ['$scope', '$http', function($scope, $http){
 				if ($scope.portfolioSelection < $scope.workSelection.length - 1) {
 					$scope.portfolioSelection += 1
 				}
-				// else if ($scope.portfolioSelection === $scope.workSelection.length)
 				else {
 					return;
 				}

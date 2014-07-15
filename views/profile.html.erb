@@ -39,9 +39,9 @@
 			<div class="profile-options">
 
 				<div class="options-wrapper">
-					<div class="option" id="portfolio" ng-mouseenter="profile.selection = workSelection"><p>Work</p></div>
-					<div class="option" id="social" ng-mouseenter="profile.selection = pickSelection"><p>Picks</p></div>
-					<div class="option" id="bio" ng-mouseenter="profile.selection = storySelection"><p>Story</p></div>
+					<div class="option" id="portfolio" ng-mouseenter="profile.selection = firstThree(workSelection)"><p>Work</p></div>
+					<div class="option" id="social" ng-mouseenter="profile.selection = firstThree(pickSelection)"><p>Picks</p></div>
+					<div class="option" id="bio" ng-mouseenter="profile.selection = firstThree(storySelection)"><p>Story</p></div>
 				</div>
 			</div>
 

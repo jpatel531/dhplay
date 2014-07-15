@@ -23,6 +23,78 @@
 			"additionalInformation": "Featured in Notes",
 			"commissionedOrFeatured": true,
 			"image": "../images/street.jpg"
+		},
+		{
+			"title": "Dinner",
+			"description": "This is a short description of the art-work for the profile preview.",
+			"recommendations": 193,
+			"additionalInformation": "Commissioned",
+			"commissionedOrFeatured": true,
+			"image": "../images/dinner.jpg"
+		},
+		{
+			"title": "Hotel",
+			"description": "This is a short description of the art-work for the profile preview.",
+			"recommendations": 193,
+			"additionalInformation": "Commissioned",
+			"commissionedOrFeatured": true,
+			"image": "../images/hotel.jpg"
+		},
+		{
+			"title": "Streetlamp",
+			"description": "This is a short description of the art-work for the profile preview.",
+			"recommendations": 193,
+			"additionalInformation": "Commissioned",
+			"commissionedOrFeatured": true,
+			"image": "../images/streetlamp.jpg"
+		},
+		{
+			"title": "Owl",
+			"description": "This is a short description of the art-work for the profile preview.",
+			"recommendations": 193,
+			"additionalInformation": "Commissioned",
+			"commissionedOrFeatured": true,
+			"image": "../images/owl.jpg"
+		},
+		{
+			"title": "Katz",
+			"description": "This is a short description of the art-work for the profile preview.",
+			"recommendations": 193,
+			"additionalInformation": "Commissioned",
+			"commissionedOrFeatured": true,
+			"image": "../images/katz.jpg"
+		},
+		{
+			"title": "Faces #1",
+			"description": "This is a short description of the art-work for the profile preview.",
+			"recommendations": 193,
+			"additionalInformation": "Commissioned",
+			"commissionedOrFeatured": true,
+			"image": "../images/faces.jpg"
+		},
+		{
+			"title": "Faces #2",
+			"description": "This is a short description of the art-work for the profile preview.",
+			"recommendations": 193,
+			"additionalInformation": "Commissioned",
+			"commissionedOrFeatured": true,
+			"image": "../images/faces2.jpg"
+		},
+		{
+			"title": "Faces #3",
+			"description": "This is a short description of the art-work for the profile preview.",
+			"recommendations": 193,
+			"additionalInformation": "Commissioned",
+			"commissionedOrFeatured": true,
+			"image": "../images/faces3.jpg"
+		},
+		{
+			"title": "Faces #4",
+			"description": "This is a short description of the art-work for the profile preview.",
+			"recommendations": 193,
+			"additionalInformation": "Commissioned",
+			"commissionedOrFeatured": true,
+			"image": "../images/faces4.jpg"
 		}
 
 	],
