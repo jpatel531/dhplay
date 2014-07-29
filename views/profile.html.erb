@@ -1,18 +1,18 @@
+
 <html lang="en" ng-app="profile-page">
 <head>
 	<title></title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	 <script src="http://thecodeplayer.com/uploads/js/jquery-1.7.1.min.js" type="text/javascript"></script>
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	<script src="javascript/bootstrap-lightbox.min.js" type="text/javascript"></script>
+	 <script src="javascript/scroll.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
-<!--   	// <script src="https://code.angularjs.org/1.2.20/angular-animate.min.js"></script> -->
-
   <script src="javascript/profile.js"></script>
   <script src="javascript/magnifier.js"></script>
    <link href="styles/styles.css" rel="stylesheet">
  	<script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>
- 	<script src="javascript/scroll.js"></script>
+ 	<script type="text/javascript" src="javascript/jquery-ui.min.js"></script>
+ 	<script type="text/javascript" src="https://rawgit.com/angular-ui/ui-sortable/master/src/sortable.js"></script>
+ 		<script type="text/javascript" src="https://code.angularjs.org/1.2.20/angular-sanitize.min.js"></script>
  </head>
 <body ng-controller="ProfileController as profile">
 
@@ -20,26 +20,26 @@
 
 	<div class="body-wrapper">
 
-		<div class="summary">
+		<div class="summary" id="summary-section">
 
-			<div class="profile-info">
+			<div class="profile-info summary-column">
 				<div class="info-wrapper">
 					<div class="pic-wrapper">
-						<img id="profile-pic" src="images/jpeg.jpg">
+						<img id="profile-pic" ng-src="{{user.image}}">
 					</div>
-					<h1 class="name">Laurie Lewis</h1>
-					<p class="profession">Artist & Illustrator</p>
-					<p class="short-bio">Please feel free to contact me directly if you would like to know more about what I do or request a commission.</p>
+					<h1 class="name">{{user.name}}</h1>
+					<p class="profession">{{user.profession}}</p>
+					<p class="short-bio">{{user.shortBio}}</p>
 					<hr>
-					<p class="network">University of Cambridge</p>
+					<p class="network">{{user.network}}</p>
 					<hr>
-					<p class="organisations">Co-founder of <a href="#">Notes</a></p>
+					<p class="organisations">{{user.organisationPosition}} of <a href="#">{{user.organisation}}</a></p>
 					<span><button id="follow"></button>
-					<button id="message"></button></span>
+					<button id="message" ng-show="user.messageable"></button></span>
 				</div>
 			</div>
 
-			<div class="profile-options">
+			<div class="profile-options summary-column">
 
 				<div class="options-wrapper">
 					<div class="option" id="portfolio" ng-mouseenter="profile.selection = workPreview"><p>Work</p></div>
@@ -48,7 +48,7 @@
 				</div>
 			</div>
 
-			<div class="profile-preview">
+			<div class="profile-preview summary-column">
 
 				<div class="info-wrapper preview-wrapper">
 
@@ -84,11 +84,12 @@
 		</div>	
 	</div>
 
+	<!-- <hr class="page-divider"> -->
 <!--------------------------- PORTFOLIO-------------------------------->
-	<div class="portfolio" ng-keydown="togglePortfolio($event)" tabindex="0">
+	<div class="portfolio" id="work-section" ng-keydown="togglePortfolio($event)" tabindex="0">
 
 		<div class="portfolio-nav nav">
-			<ul class="work-selector">
+			<ul class="work-selector" ui-sortable ng-model="workSelection" appSortable>
 				<li 
 					ng-repeat="work in workSelection"
 					ng-click="displayFull(work)"
@@ -100,25 +101,51 @@
 		</div>
 
 
-		<div class="work-container">
-			<div class="magnify">
-				<div class="large" style="background:url({{workSelection[portfolioSelection].image}}) no-repeat"></div>
-				<img class="small select" ng-src="{{workSelection[portfolioSelection].image}}">
+		<div class="work-information-container">
+			<div class="work-information-inner">
 			</div>
 		</div>
 
-		<!-- <button class="comment"></button> -->
+
+		<div class="work-container">
+			<div class="magnify" ng-show="currentWork().format == 'image' ">
+				<div class="large" style="background:url({{currentWork().image}}) no-repeat"></div>
+				<img class="small select" ng-src="{{currentWork().image}}">
+			</div>
+
+			<div class="text-work" ng-show="currentWork().format == 'text'">
+				<div class="text-wrapper" ng-repeat="work in currentWork().text">
+					<div ng-class="{'first': $first}">
+						<p class="work-paragraph" ng-repeat="paragraph in work">
+							{{paragraph}}
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="work-footer">
+
+		</div>
 
 		<div class="profile-nav nav">
 			<ul class="section-selector">
-			<li>Cover</li>
-			<li>Work</li>
+			<li id="cover">Cover</li>
+			<li id="work">Work</li>
 			<li>Picks</li>
 			<li>Story</li>
 			</ul>
 		</div>
 
 	</div>
+
+
+
+
+
+
 
 </body>
 </html>

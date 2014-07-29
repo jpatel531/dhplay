@@ -5,6 +5,8 @@
 @import url('http://fonts.googleapis.com/css?family=Vollkorn:400italic,400');
 @import url('http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700');
 @import url('http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic');
+@import url('http://fonts.googleapis.com/css?family=Droid+Sans');
+@import url('http://fonts.googleapis.com/css?family=Cardo:400,400italic');
 
 @font-face {
 	font-family: 'Entypo';
@@ -54,7 +56,7 @@ div.summary {
 
 .profile-options {
 	height: 100%;
-	width: 8%;
+	width: 90px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -139,9 +141,9 @@ div.preview-wrapper {
 
 div.pic-wrapper {
 	border-radius: 50%;
-	width: 12vw;
+	width: 150px;
 	height: 0;
-	padding-bottom: 12vw;
+	padding-bottom: 150px;
 	border: solid;
 	border-width: thin;
 	border-color: rgba(0,0,0,0.2);
@@ -303,9 +305,9 @@ div.work {
 
 div.preview-pic.pic-wrapper{
 	border-radius: 50%;
-	width: 25%;
+	width: 100px;
 	height: 0;
-	padding-bottom: 25%;
+	padding-bottom: 100px;
 	border: solid;
 	border-width: thin;
 	border-color: rgba(0,0,0,0.2);
@@ -414,6 +416,12 @@ hr#after-work {
 
 /*-------PORTFOLIO---------*/
 
+/*hr.page-divider {
+	margin-top: 0;
+	width: 20%;
+	margin-right: 4%;
+}*/
+
 div.portfolio {
 	min-height: 100%;
 	/*height: 60px;*/
@@ -435,11 +443,21 @@ div.portfolio:focus {
 
 div.work-container {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
-	width: 90%;
-	height: 90%;
+	width: 75%;
+	height: 65%;
 }
+
+div.work-information-container {
+
+}
+
+div.work-information-inner {
+
+}
+
+/*---VISUAL PIECES--*/
 
 img.select, img.small {
 	max-width: 100%;
@@ -466,6 +484,7 @@ button.comment::before {
 /*----MAGNIFIER----*/
 
 .magnify {
+	max-width: 75%;
 	width: auto; 
 	margin: 0 auto;
 	position: relative;
@@ -497,37 +516,154 @@ button.comment::before {
 
 /*------PORTFOLIO NAV------*/
 
+.nav {
+	background-color: white;
+	opacity: 1;
+}
+
+.nav ul {
+	background-color: white;
+	opacity: 1;
+}
+
 .profile-nav {
 	position: fixed;
-	top: 14%;
+	top: 1%;
 	right: 2%;
-	display: hidden;
+	opacity: 1;
 }
 
 .portfolio-nav {
 	position: fixed;
-	top: 14%;
+	top: 1%;
 	left: 2%;
-	display: hidden;
+	opacity: 1;
+	max-width: 100%;
+}
+
+
+.nav ul li {
+	display: inline;
 }
 
 ul.work-selector {
 	list-style-type: none;
 }
 
-ul.work-selector li{
+.nav li{
 	cursor: pointer;
-	/*font-family: 'PT Sans Narrow', sans-serif;*/
-	font-family: 'Playfair Display', serif;
-	/*font-family: 'Merriweather', serif;*/
-	/*font-family: 'Lato', sans-serif;*/
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	list-style: none;
 	line-height: 32px;
 	color: #b3b2b5;
 }
 
-ul.work-selector li.active {
+ul li.active {
 	color: black;
 }
 
-/*---ANIMATIONS----*/
+ul li::after {
+	content: "  ·  ";
+}
 
+ul li:last-child::after {
+	content: "";
+}
+
+/*---TEXT-PIECES----*/
+
+div.text-work {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+	/*margin-top: 800%;*/
+	font-family: 'Merriweather', serif;
+	font-weight: 300;
+	/*font-weight: 400;*/
+
+}
+
+div.text-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 5%;
+	margin-right: 5%
+}
+
+p.work-paragraph {
+	margin-bottom: 30px;
+	margin-right: 20%;
+	margin-left: 20%;
+	letter-spacing: 0.01rem;
+	font-style: normal;
+	font-size: 20px;
+	line-height: 1.8em;
+	text-align: justify;
+}
+
+div.first p.work-paragraph:first-child:first-letter {
+	float: left; 
+	font-size: 69px; 
+	line-height: 60px; 
+	padding-top: 9px; 
+	padding-right: 8px; 
+	padding-left: 0px;
+}
+
+div.first p.work-paragraph::first-line {
+	font-variant: small-caps;
+	font-weight: 400;
+	letter-spacing: 0.05rem;
+}
+
+/*WORK FOOTER FOR COMMENTS N SHIT */
+
+div.work-footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	margin: 0 auto;
+	height: 3.6em;
+	background-color: rgba(128, 128, 128, 0.1);
+	/*background-color: #CCFFFF;*/
+	/*background-color: darkblue;*/
+	background-color: red;
+	opacity: 1;
+	/*background-color: white;*/
+	/*opacity: 1;*/
+}
+
+/*------------MEDIA QUERIES------------*/
+
+@media only screen and (max-width: 960px) {
+
+	div.summary {
+		flex-direction: column;
+		align-items: center;
+		min-height: 100%;
+	}
+
+	div.summary-column {
+		min-height: 100%;
+	}
+
+	div.profile-options {
+		display: none;
+	}
+
+	p.short-bio, p.network, p.organisations, p.featured-in {
+		font-size: 10px;
+		width: 165%;
+
+	}
+
+
+}
