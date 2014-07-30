@@ -1,4 +1,14 @@
 {
+	"profileInformation": {
+		"name": "Laurie Lewis",
+		"image": "../images/jpeg.jpg",
+		"profession": "Artist & Illustrator",
+		"shortBio": "Please feel free to contact me directly if you would like to know more about what I do or request a commission.",
+		"network": "University of Cambridge",
+		"organisationPosition": "Co-founder",
+		"organisation": "Notes",
+		"messageable": true
+	},
 	"workSelection": [
 		{
 			"title": "Chillies",
